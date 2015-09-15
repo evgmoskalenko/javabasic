@@ -1,4 +1,4 @@
-package com.goit.Lesson1;
+package com.goit.lesson1;
 
 public class HelloWorld {
     public static void main (String[] args) {

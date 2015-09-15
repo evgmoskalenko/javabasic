@@ -1,6 +1,4 @@
-package com.goit.Lesson6;
-
-import java.util.Scanner;
+package com.goit.lesson6;
 
 /**
  * написать класс, который будет находить минимальное и максимальное значение в массиве

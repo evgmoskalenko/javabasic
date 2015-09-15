@@ -1,4 +1,4 @@
-package com.goit.Lesson2;
+package com.goit.lesson2;
 
 public class HelloWorldWithoutMain {
     static {
