@@ -1,13 +1,19 @@
-package Lesson4;
+package com.goit.Lesson6;
+
+import java.util.Scanner;
 
 /**
- * написать класс который будет находить минимальное и максимальное значение в массиве
- * сортировка массива по возрастанию и убыванию
+ * РЅР°РїРёСЃР°С‚СЊ РєР»Р°СЃСЃ, РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ РЅР°С…РѕРґРёС‚СЊ РјРёРЅРёРјР°Р»СЊРЅРѕРµ Рё РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ РјР°СЃСЃРёРІРµ
+ * СЃРґРµР»Р°С‚СЊ СЃРѕСЂС‚РёСЂРѕРІРєСѓ РјР°СЃСЃРёРІР° РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ Рё СѓР±С‹РІР°РЅРёСЋ
  */
 
 public class ArrayMinMaxValue {
     public static void main(String[] args) {
-        //System.out.println("max value: " + min + " and " "min value: " + max +);
+        //Scanner in = new Scanner(System.in);
+        //System.out.println("Please enter numbers");
+        //int  = in.nextInt();
+        //System.out.println("max value: " + min() + " and" + "min value: " + max());
+        //Arrays.sort()
     }
 
     public static int min(int[] arrayMin) {
@@ -20,7 +26,7 @@ public class ArrayMinMaxValue {
             }
             return minValue;
         } else {
-            System.out.println("Введите пожалуйста числа");
+            System.out.println("Please enter the numbers");
             return 0;
         }
     }
@@ -35,7 +41,7 @@ public class ArrayMinMaxValue {
             }
             return maxValue;
         } else {
-            System.out.println("Введите пожалуйста числа");
+            System.out.println("Please enter the numbers");
             return 0;
         }
     }
