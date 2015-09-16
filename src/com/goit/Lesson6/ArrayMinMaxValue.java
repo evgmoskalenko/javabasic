@@ -1,5 +1,7 @@
 package com.goit.lesson6;
 
+import java.util.Scanner;
+
 /**
  * написать класс, который будет находить минимальное и максимальное значение в массиве
  * сделать сортировку массива по возрастанию и убыванию
@@ -7,11 +9,22 @@ package com.goit.lesson6;
 
 public class ArrayMinMaxValue {
     public static void main(String[] args) {
-        //Scanner in = new Scanner(System.in);
-        //System.out.println("Please enter numbers");
-        //int  = in.nextInt();
+        min(inputData());
+        max(inputData());
         //System.out.println("max value: " + min() + " and" + "min value: " + max());
         //Arrays.sort()
+    }
+
+    public static int[] inputData() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Please enter numbers");
+        int s1 = in.nextInt();
+        int[] s = new int[s1];
+        for (int i = 0; i<s1; i++) {
+            int inputDataNumber = in.nextInt();
+            s[i] = inputDataNumber;
+        }
+        return s;
     }
 
     public static int min(int[] arrayMin) {
