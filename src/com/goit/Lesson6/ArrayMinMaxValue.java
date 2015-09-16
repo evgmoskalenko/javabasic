@@ -9,13 +9,13 @@ import java.util.Scanner;
 
 public class ArrayMinMaxValue {
     public static void main(String[] args) {
-        int[] foobar = inputData();
-        if (foobar.length != 0) {
-            min(foobar);
-            max(foobar);
-            System.out.println("max value: " + max(foobar) + ", and " + "min value: " + min(foobar));
+        int[] arrayVarInputData = inputData();
+        int minValue = min(arrayVarInputData);
+        int maxValue = max(arrayVarInputData);
+        if (arrayVarInputData.length != 0) {
+            System.out.println("max value: " + maxValue + ", and " + "min value: " + minValue);
         } else {
-            System.out.println("Error");
+            System.out.println("Error: Please enter a number, except for \"0\" or \"1\"");
         }
         //Arrays.sort()
     }
@@ -23,14 +23,14 @@ public class ArrayMinMaxValue {
     public static int[] inputData() {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the length of the array:");
-        int s1 = in.nextInt();
-        System.out.println("Input " + s1 + " numbers");
-        int[] s = new int[s1];
-        for (int i = 0; i < s1; i++) {
+        int arrayLength = in.nextInt();
+        System.out.println("Input " + arrayLength + " numbers");
+        int[] array = new int[arrayLength];
+        for (int i = 0; i < arrayLength; i++) {
             int inputDataNumber = in.nextInt();
-            s[i] = inputDataNumber;
+            array[i] = inputDataNumber;
         }
-        return s;
+        return array;
     }
 
     public static int min(int[] arrayMin) {
