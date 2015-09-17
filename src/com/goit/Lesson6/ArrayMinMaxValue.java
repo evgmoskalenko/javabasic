@@ -9,19 +9,16 @@ import java.util.Scanner;
 
 public class ArrayMinMaxValue {
     public static void main(String[] args) {
-        int[] arrayVarInputData = inputData();
-        int[] foobar = sortData();
-        int minValue = min(arrayVarInputData);
-        int maxValue = max(arrayVarInputData);
-
-        if (arrayVarInputData.length != 0) {
+        int[] arrayInputData = inputData();
+        int[] arraySortData = sortData(arrayInputData);
+        int minValue = min(arrayInputData);
+        int maxValue = max(arrayInputData);
+        if (arrayInputData.length != 0) {
             System.out.println("\nMIN and MAX value: min=" + minValue + ", " + "max=" + maxValue);
-
             System.out.print("Sort: ");
-            for (int i = 0; i < foobar.length; i++) {
-                System.out.print(foobar[i] + " -> ");
+            for (int i = 0; i < arraySortData.length; i++) {
+                System.out.print(arraySortData[i] + " -> ");
             }
-
         } else {
             System.out.println("Error: Please enter a number, except for \"0\" or \"1\"");
         }
@@ -40,7 +37,7 @@ public class ArrayMinMaxValue {
         return array;
     }
 
-    public static void sortData(int[] sortArray) {
+    public static int[] sortData(int[] sortArray) {
         for (int i = sortArray.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (sortArray[j] > sortArray[j + 1]) {
@@ -50,17 +47,7 @@ public class ArrayMinMaxValue {
                 }
             }
         }
-
-        //System.out.print("Sort: ");
-        //for (int i = 0; i < arrayVarInputData.length; i++) {
-        //    System.out.print(arrayVarInputData[i] + " -> ");
-        //}
-        //System.out.print("Sort: ");
-        //for (int i = 0; i < arrayVarInputData.length; i++) {
-        //    System.out.print(arrayVarInputData[i] + " <- ");
-        //}
-        //Arrays.sort(inputData(array)); // Sort (->)
-        //Arrays.sort(array, Collections.reverseOrder()); // Sort (<-)
+        return sortArray;
     }
 
     public static int min(int[] arrayMin) {
