@@ -1,7 +1,5 @@
 package com.goit.lesson6;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -12,19 +10,18 @@ import java.util.Scanner;
 public class ArrayMinMaxValue {
     public static void main(String[] args) {
         int[] arrayVarInputData = inputData();
+        int[] foobar = sortData();
         int minValue = min(arrayVarInputData);
         int maxValue = max(arrayVarInputData);
 
         if (arrayVarInputData.length != 0) {
-            System.out.print("Sort: ");
-            for (int i = 0; i < arrayVarInputData.length; i++) {
-                System.out.print(arrayVarInputData[i] + " -> ");
-            }
-            //System.out.print("Sort: ");
-            //for (int i = 0; i < arrayVarInputData.length; i++) {
-            //    System.out.print(arrayVarInputData[i] + " <- ");
-            //}
             System.out.println("\nMIN and MAX value: min=" + minValue + ", " + "max=" + maxValue);
+
+            System.out.print("Sort: ");
+            for (int i = 0; i < foobar.length; i++) {
+                System.out.print(foobar[i] + " -> ");
+            }
+
         } else {
             System.out.println("Error: Please enter a number, except for \"0\" or \"1\"");
         }
@@ -40,9 +37,30 @@ public class ArrayMinMaxValue {
             int inputDataNumber = in.nextInt();
             array[i] = inputDataNumber;
         }
-        Arrays.sort(array); // Sort (->)
-        //Arrays.sort(array, Collections.reverseOrder()); // Sort (<-)
         return array;
+    }
+
+    public static void sortData(int[] sortArray) {
+        for (int i = sortArray.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (sortArray[j] > sortArray[j + 1]) {
+                    int tmp = sortArray[j];
+                    sortArray[j] = sortArray[j + 1];
+                    sortArray[j + 1] = tmp;
+                }
+            }
+        }
+
+        //System.out.print("Sort: ");
+        //for (int i = 0; i < arrayVarInputData.length; i++) {
+        //    System.out.print(arrayVarInputData[i] + " -> ");
+        //}
+        //System.out.print("Sort: ");
+        //for (int i = 0; i < arrayVarInputData.length; i++) {
+        //    System.out.print(arrayVarInputData[i] + " <- ");
+        //}
+        //Arrays.sort(inputData(array)); // Sort (->)
+        //Arrays.sort(array, Collections.reverseOrder()); // Sort (<-)
     }
 
     public static int min(int[] arrayMin) {
