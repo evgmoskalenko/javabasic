@@ -1,5 +1,7 @@
 package com.goit.lesson6;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -12,12 +14,20 @@ public class ArrayMinMaxValue {
         int[] arrayVarInputData = inputData();
         int minValue = min(arrayVarInputData);
         int maxValue = max(arrayVarInputData);
+
         if (arrayVarInputData.length != 0) {
-            System.out.println("max value: " + maxValue + ", and " + "min value: " + minValue);
+            System.out.print("Sort: ");
+            for (int i = 0; i < arrayVarInputData.length; i++) {
+                System.out.print(arrayVarInputData[i] + " -> ");
+            }
+            //System.out.print("Sort: ");
+            //for (int i = 0; i < arrayVarInputData.length; i++) {
+            //    System.out.print(arrayVarInputData[i] + " <- ");
+            //}
+            System.out.println("\nMIN and MAX value: min=" + minValue + ", " + "max=" + maxValue);
         } else {
             System.out.println("Error: Please enter a number, except for \"0\" or \"1\"");
         }
-        //Arrays.sort()
     }
 
     public static int[] inputData() {
@@ -30,6 +40,8 @@ public class ArrayMinMaxValue {
             int inputDataNumber = in.nextInt();
             array[i] = inputDataNumber;
         }
+        Arrays.sort(array); // Sort (->)
+        //Arrays.sort(array, Collections.reverseOrder()); // Sort (<-)
         return array;
     }
 
