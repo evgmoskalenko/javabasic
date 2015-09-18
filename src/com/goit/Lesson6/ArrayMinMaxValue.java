@@ -10,7 +10,8 @@ import java.util.Scanner;
 public class ArrayMinMaxValue {
     public static void main(String[] args) {
         int[] arrayInputData = inputData();
-        int[] arraySortData = sortData(arrayInputData);
+        int[] arraySortData = sortData(arrayInputData, true);
+        int[] arrayReverseSortData = sortData(arrayInputData, false);
         int minValue = min(arrayInputData);
         int maxValue = max(arrayInputData);
         if (arrayInputData.length != 0) {
@@ -18,6 +19,10 @@ public class ArrayMinMaxValue {
             System.out.print("Sort: ");
             for (int i = 0; i < arraySortData.length; i++) {
                 System.out.print(arraySortData[i] + " -> ");
+            }
+            System.out.print("Sort: ");
+            for (int i = 0; i < arrayReverseSortData.length; i++) {
+                System.out.print(arrayReverseSortData[i] + " <- ");
             }
         } else {
             System.out.println("Error: Please enter a number, except for \"0\" or \"1\"");
@@ -37,13 +42,21 @@ public class ArrayMinMaxValue {
         return array;
     }
 
-    public static int[] sortData(int[] sortArray) {
+    public static int[] sortData(int[] sortArray, boolean changeSort) {
         for (int i = sortArray.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
-                if (sortArray[j] > sortArray[j + 1]) {
-                    int tmp = sortArray[j];
-                    sortArray[j] = sortArray[j + 1];
-                    sortArray[j + 1] = tmp;
+                if (changeSort) {
+                    if (sortArray[j] > sortArray[j + 1]) {
+                        int tmp = sortArray[j];
+                        sortArray[j] = sortArray[j + 1];
+                        sortArray[j + 1] = tmp;
+                    }
+                } else {
+                    if (sortArray[j] < sortArray[j + 1]) {
+                        int tmp = sortArray[j];
+                        sortArray[j] = sortArray[j + 1];
+                        sortArray[j + 1] = tmp;
+                    }
                 }
             }
         }
