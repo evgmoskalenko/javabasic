@@ -3,7 +3,7 @@ package com.goit.lesson7;
 /**
  * Create your own exception class for OO-model from home task "Java and OOP"
  * Add processing for created exception
- * (к домашнему заданию, которое было по ООП, добавить свой самописный класс c Exception и обработать его)
+ * (Рє РґРѕРјР°С€РЅРµРјСѓ Р·Р°РґР°РЅРёСЋ, РєРѕС‚РѕСЂРѕРµ Р±С‹Р»Рѕ РїРѕ РћРћРџ, РґРѕР±Р°РІРёС‚СЊ СЃРІРѕР№ СЃР°РјРѕРїРёСЃРЅС‹Р№ РєР»Р°СЃСЃ c Exception Рё РѕР±СЂР°Р±РѕС‚Р°С‚СЊ РµРіРѕ)
  */
 public class ObjectModelException {
 
