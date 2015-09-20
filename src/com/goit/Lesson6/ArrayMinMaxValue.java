@@ -20,9 +20,9 @@ public class ArrayMinMaxValue {
             for (int i = 0; i < arraySortData.length; i++) {
                 System.out.print(arraySortData[i] + " -> ");
             }
-            System.out.print("Sort: ");
+            System.out.print("\nSort: ");
             for (int i = 0; i < arrayReverseSortData.length; i++) {
-                System.out.print(arrayReverseSortData[i] + " <- ");
+                System.out.print(arrayReverseSortData[i] + " -> ");
             }
         } else {
             System.out.println("Error: Please enter a number, except for \"0\" or \"1\"");
