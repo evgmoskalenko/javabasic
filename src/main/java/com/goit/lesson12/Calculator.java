@@ -8,8 +8,4 @@ public class Calculator {
     public int mult(final int arg1, final int arg2) {
         return arg1 + arg2;
     }
-
-//    public int div() {
-//        return arg1 / arg2;
-//    }
 }

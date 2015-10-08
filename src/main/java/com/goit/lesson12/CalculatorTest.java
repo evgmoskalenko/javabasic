@@ -32,14 +32,4 @@ public class CalculatorTest {
         final int arg2 = 5;
         assertEquals(arg1 + arg2, calculator.mult(arg1, arg2));
     }
-
-//    @Test
-//    public void testDiv() throws Exception {
-//        int delimoe = 42;
-//        int delimoe = 7;
-//
-//        int chastnoe = 42 / 7;
-//
-//        assertEquals(6, calculator.add(arg1, arg2));
-//    }
 }
